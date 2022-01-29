@@ -1,4 +1,4 @@
-# heart_disease_prediction_web
+# Heart disease prediction web application
 
 [Website Link](http://heart-disease-web-prediction.herokuapp.com/)
 
