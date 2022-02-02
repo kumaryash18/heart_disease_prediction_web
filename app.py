@@ -30,7 +30,7 @@ def predict():
                 thal]
     response = Model.predict([features])        # predicting
 
-    return render_template('index.html', prediction=True, response=response)
+    return render_template('predict.html', response=response)
 
 
 if __name__ == '__main__':

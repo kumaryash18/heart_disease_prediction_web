@@ -14,63 +14,70 @@
     <div class="container">
         <h1 class="text-center">Heart Disease Prediction</h1>
         <br>
-        {% if prediction %}
-        {% if response %}
-        <div class="text-center text-danger">
-            Prediction: Heart Disease
-        </div>
-        {% else %}
-        <div class="text-center text-success">
-            Prediction: Normal
-        </div>
-        {% endif %}
-        {% endif %}
         <form action="predict" method="POST" class="row">
             <div class="col-md-4">
                 <label class="form-label">Enter age:</label>
-                <input type="text" name="age" class="form-control">
+                <input type="number" name="age" class="form-control" required>
             </div>
             <div class="col-md-4">
                 <label class="form-label">Select gender:</label>
-                <select name="sex" class="form-control">
-                    <option selected class="text-muted">Choose...</option>
+                <select name="sex" class="form-control" required>
                     <option value=1>Male</option>
                     <option value=0>Female</option>
                 </select>
             </div>
             <div class="col-md-3">
-                <label class="form-label">Enter Chest Pain type:</label>
-                <input type="text" name="cp" class="form-control">
+                <label class="form-label">Select Chest Pain type:</label>
+                <select name="cp" class="form-control" required>
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                </select>
             </div>
             <div class="col-md-4">
                 <label class="form-label">Enter Resting Blood Pressure (in mm Hg):</label>
-                <input type="text" name="trestbps" class="form-control">
+                <input type="number" name="trestbps" class="form-control" required>
             </div>
             <div class="col-md-4">
                 <label class="form-label">Enter serum Cholestrol (in mg/dl):</label>
-                <input type="text" name="chol" class="form-control">
+                <input type="number" name="chol" class="form-control" required>
             </div>
             <div class="col-md-3">
-                <label class="form-label">Enter Resting ECG Level:</label>
-                <input type="text" name="restecg" class="form-control">
+                <label class="form-label">Select Resting ECG Level:</label>
+                <select name="restecg" class="form-control" required>
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                </select>
             </div>
             <div class="col-md-4">
                 <label class="form-label">Enter maximum heart rate acheived:</label>
-                <input type="text" name="thalach" class="form-control">
+                <input type="number" name="thalach" class="form-control" required>
             </div>
             <div class="col-md-4">
                 <label class="form-label">Enter ST depression induced by exercise relative to rest:</label>
-                <input type="text" name="oldpeak" class="form-control">
+                <input type="number" step="any" name="oldpeak" class="form-control" required>
             </div>
             <div class="col-md-3">
-                <label class="form-label">Enter number of major vessels (0-3) colored by flourosopy:</label>
-                <input type="text" name="ca" class="form-control">
+                <label class="form-label">Select number of major vessels colored by flourosopy:</label>
+                <select name="ca" class="form-control" required>
+                    <option value=0>0</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                </select>
             </div>
             <div class="col-md-3">
-                <label class="form-label">Enter thal:</label>
-                <input type="text" name="thal" class="form-control">
+                <label class="form-label">Select thal:</label>
+                <select name="thal" class="form-control" required>
+                    <option value=3>normal</option>
+                    <option value=6>fixed defect</option>
+                    <option value=7>reversable defect</option>
+                </select>
             </div>
             <br>
+            <p class="text-info">*All fields are mandatory</p>
             <div class="text-center">
                 <input type="submit" value="Submit" class="btn btn-primary">
             </div>
