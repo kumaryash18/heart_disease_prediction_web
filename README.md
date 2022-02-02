@@ -1,5 +1,7 @@
 # Heart disease prediction web application
 
-[Website Link](http://heart-disease-web-prediction.herokuapp.com/)
+> This application predicts the presence of heart disease in a patient using an underlying supervised machine learning classification model.
+> It considers patient's different test parameters and predicts a binary response.  
+> [Kaggle](https://www.kaggle.com/ronitf/heart-disease-uci)
 
-[Kaggle](https://www.kaggle.com/ronitf/heart-disease-uci)
+[Website Link](http://heart-disease-web-prediction.herokuapp.com/)
