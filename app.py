@@ -1,6 +1,9 @@
 # importing modules and Model
 from flask import Flask, render_template, request
-from model import Model
+import pickle
+
+# loading model
+Model = pickle.load(open('heart-disease-model.pk1' , 'rb'))
 
 # intanciating web application
 app = Flask(__name__)

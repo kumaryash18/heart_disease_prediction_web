@@ -5,6 +5,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
 # from matplotlib import pyplot as plt
+import pickle
 
 # preprocessing data
 data = pd.read_csv("heart.csv")
@@ -55,3 +56,5 @@ logreg.fit(X, y)
 
 # based on accuracy, considering the best Model
 Model = logreg      # logistic regression (newton-cg) has highest accuracy
+
+pickle.dump(Model , open('heart-disease-model.pk1' , 'wb')) # saving model

@@ -29,5 +29,3 @@
 ![img4](./images/img4.png "Prediction 2 output")
 
 ---
-
-#### Predict here: [Website Link]()
